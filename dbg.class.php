@@ -57,3 +57,7 @@ class dbg {
 		}
         }
   }
+
+/*
+$dbg = new dbg($type, $code);
+*/
