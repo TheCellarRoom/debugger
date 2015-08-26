@@ -6,14 +6,13 @@ class dbg {
 			switch($type) {
 			
 			 case: 'OUTPUT'
-					 		if ( $output ) : ?>
+				if ( $output ) : ?>
 		                <style>
 		                    .hm_debug { word-wrap: break-word; white-space: pre; text-align: left; position: relative; background-color: rgba(0, 0, 0, 0.8); font-size: 11px; color: #a1a1a1; margin: 10px; padding: 10px; margin: 0 auto; width: 80%; overflow: auto;  -moz-border-radius: 5px; -webkit-border-radius: 5px; text-shadow: none; }
 		                </style>
 		                <br />
 		                <pre class="hm_debug">
-		
-		            <?php endif;
+		        	 <?php endif;
 		            // var_dump everything except arrays and objects
 		            if ( ! is_array( $code ) && ! is_object( $code ) ) :
 		                if ( $output )
@@ -52,13 +51,8 @@ class dbg {
 			         print '</pre>';
 			         print '<hr/>';
 			 break;
+		}
         }
   }
   
-  
-    
-
-
-    }
-
-}
+  new dbg();
