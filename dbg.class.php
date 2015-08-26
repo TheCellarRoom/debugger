@@ -1,7 +1,7 @@
 
 class dbg {
 
-  function __construct( $type, $data, $output = TRUE) {
+  function __construct( $type, $code, $output = TRUE) {
   
 			switch($type) {
 			
@@ -43,11 +43,14 @@ class dbg {
             				die( print_r( $code, true ) );
         				}
 			break;
-						case: 'TYPE'
+			case: 'CONSOLE'
+				?><script>console.log('<?php print $code; ?>');</script><?php
+			break;
+			case: 'TYPE'
 			default:
-			         print '<h5>'. gettype($data).'</h5>';
+			         print '<h5>'. gettype($code).'</h5>';
 			         print '<pre>';
-			         print_r($data);
+			         print_r($code);
 			         print '</pre>';
 			         print '<hr/>';
 			 break;
